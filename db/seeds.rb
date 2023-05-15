@@ -28,6 +28,7 @@ puts "Finding or Creating Categories ..."
 cat1 = Category.find_or_create_by! name: 'Evergreens'
 cat2 = Category.find_or_create_by! name: 'Shrubs'
 cat3 = Category.find_or_create_by! name: 'Trees'
+cat4 = Category.find_or_create_by! name: 'Domestic Abuse'
 
 ## PRODUCTS
 
@@ -50,20 +51,12 @@ cat1.products.create!({
   price: 64.99
 })
 
-cat1.products.create!({
-  name:  'Scented Blade',
-  description: "
-  The Scented Blade is an extremely rare, tall plant and can be found mostly in savannas. It blooms once a year, for 2 weeks.
-It has thin, palmate leaves, which are usually lime green. It also grows small flowers, which can be dark blue, light gold and dark red.
-
-These plants grow in large groups, but it's fairly easy to control and maintain their growth.
-They can be eaten to relief a sore throat.
-
-As a defense mechanism the Scented Blade can collapse its flowers when it detects vibrations.
-They rely on animal pollination to reproduce. Once pollinated, they grow fairly large, delicious nuts.",
-  image: open_asset('plante_2.jpg'),
-  quantity: 18,
-  price: 24.99
+cat4.shelters.create!({
+  name:  "Womens' Help",
+  women_capacity: 50,
+  current_residents: 12,
+  counselling_service: true,
+  address: "123 4st N",  
 })
 
 cat1.products.create!({
@@ -216,6 +209,8 @@ cat3.products.create!({
   quantity: 23,
   price: 79.99
 })
+
+
 
 
 puts "DONE!"
