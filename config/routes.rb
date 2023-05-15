@@ -8,15 +8,17 @@ Rails.application.routes.draw do
 
   get '/signup' => 'users#new'
   post '/users' => 'users#create'
+  
+  resources :shelters, only: [:index, :show]
 
 
+ 
   root to: 'products#index'
-   
-  resources :products, only: [:index, :show]
-  resources :categories, only: [:show]
-  resource :cart, only: [:show] do
-    post   :add_item
-    post   :remove_item
+    resources :products, only: [:index, :show]
+    resources :categories, only: [:show]
+    resource :cart, only: [:show] do
+      post   :add_item
+      post   :remove_item
   end
   
   resources :orders, only: [:create, :show]
