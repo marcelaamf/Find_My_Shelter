@@ -28,7 +28,8 @@ puts "Finding or Creating Categories ..."
 cat1 = Category.find_or_create_by! name: 'Evergreens'
 cat2 = Category.find_or_create_by! name: 'Shrubs'
 cat3 = Category.find_or_create_by! name: 'Trees'
-cat4 = Category.find_or_create_by! name: 'Domestic Abuse'
+cat4 = Category.find_or_create_by! name: 'Emergency'
+cat5 = Category.find_or_create_by! name: 'Domestic Violence'
 
 ## PRODUCTS
 
@@ -52,13 +53,60 @@ cat1.products.create!({
 })
 
 cat4.shelters.create!({
-  name:  "Womens' Help",
-  women_capacity: 50,
-  current_residents: 12,
+  name:  "The Mustard Seed",
+  women_capacity: 25,
+  men_capacity: 30,
+  men_capacity: 30,
+  children_capacity: 15,
+  current_residents: 20,
+  accept_man: true,
+  accept_woman: true,
+  youth_only: false,
+  accept_kids: true,
   counselling_service: true,
-  address: "123 4st N",  
+  clothing: true,
+  restroom_service: true,
+  cafeteria: false,
+  address: "102 11 Ave SE, Calgary, AB T2G 0X5",
+  phone: "1·833·GIV·HOPE (448·4673)",
+  email:"info@theseed.ca",
 })
-
+cat4.shelters.create!({
+  name:  "Alpha House",
+  women_capacity: 15,
+  men_capacity: 25,
+  children_capacity: 0,
+  current_residents: 15,
+  accept_man: true,
+  accept_woman: true,
+  youth_only: false,
+  accept_kids: false,
+  counselling_service: true,
+  clothing: false,
+  restroom_service: true,
+  cafeteria: true,
+  address: "203 15 Avenue SE, Calgary, AB T2G 1G4",
+  phone: "403-234-7388",
+  email:"info@alphahousecalgary.com",
+})
+cat5.shelters.create!({
+  name:  "Calgary Women's Emergency Shelter",
+  women_capacity: 30,
+  men_capacity: 0,
+  children_capacity: 30,
+  current_residents: 20,
+  accept_man: false,
+  accept_woman: true,
+  youth_only: false,
+  accept_kids: true,
+  counselling_service: true,
+  clothing: false,
+  restroom_service: false,
+  cafeteria: false,
+  address: "500-1509 Centre St SW, Calgary, AB T2G 2E6",
+  phone: "403.539.5129",
+  email:"info@cwes.ca",
+})
 cat1.products.create!({
   name:  'Lion Grapevine',
   description: "The Lion Grapevine is an uncommon, modest plant and can be found only in some humid regions. It blooms once a year, for 4 months.

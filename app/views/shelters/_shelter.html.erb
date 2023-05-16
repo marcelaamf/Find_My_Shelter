@@ -1,21 +1,9 @@
 <article>
-  <%= link_to product_path(product) do %>
-    <%= image_tag product.image.thumb.url , alt: product.name %>
+  <%= link_to shelter_path(shelter) do %>
+  
     <h1>
-      <span><%= product.name %></span>
-      <span><%= humanized_money_with_symbol product.price %></span>
+      <span><%= shelter.name %></span>
     </h1>
   <% end%>
-  <div>
-    <% if product.quantity == 0 %>
-      <div class='soldout'>Sold Out</div> 
-      <%= button_to add_item_cart_path(product_id: product.id), class: 'btn', method: :post, disabled: product.quantity == 0 do %>
-        <%= fa_icon "shopping-cart", text: 'Add' %> 
-      <% end %>
-    <% else %>
-      <%= button_to add_item_cart_path(product_id: product.id), class: 'btn', method: :post do %>
-        <%= fa_icon "shopping-cart", text: 'Add' %> 
-      <% end %>
-    <% end %>
-  </div>
+
 </article>
