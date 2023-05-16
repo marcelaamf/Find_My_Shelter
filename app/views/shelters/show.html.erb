@@ -22,6 +22,7 @@
       <% else %>
       <p> Children Accomodation: Not Available</p>
     <% end %>
+    <p> Current Residents: <%= @shelters.current_residents %>/<%= @shelters.women_capacity + @shelters.men_capacity + @shelters.children_capacity %>
     <p> Cafeteria Available: <%= boolean_check(@shelters.cafeteria) %> </p>
     <p> Clothing Available: <%= boolean_check(@shelters.clothing) %> </p>
     <p> Bathroom Services: <%= boolean_check(@shelters.restroom_service) %> </p>
