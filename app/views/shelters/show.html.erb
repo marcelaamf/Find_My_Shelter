@@ -1,10 +1,33 @@
-<section class="products-show">
+<section class="shelter-show">
   <header class="page-header">
-   
+    <h1> <%= @shelters.name %> <h1>
+    <h5>A: <%= @shelters.address %> </h5> 
+    <h5> P: <%= @shelters.phone %> </h5> 
+    <h5>E: <%= @shelters.email %> </h5>
   </header>
-
   <article class="shelter-detail">
-   Shelter        
+    <div>
+    <% if @shelters.accept_woman %>
+      <p> Women Accomodation: <%= @shelters.women_capacity%> </p>
+      <% else %>
+      <p> Women Accomodation: Not Available</p>
+    <% end %>
+    <% if @shelters.accept_man %>
+      <p> Men Accomodation: <%= @shelters.men_capacity%> </p>
+      <% else %>
+      <p> Men Accomodation: Not Available</p>
+    <% end %>
+    <% if @shelters.accept_kids %>
+      <p> Children Accomodation: <%= @shelters.children_capacity%> </p>
+      <% else %>
+      <p> Children Accomodation: Not Available</p>
+    <% end %>
+    <p> Cafeteria Available: <%= boolean_check(@shelters.cafeteria) %> </p>
+    <p> Clothing Available: <%= boolean_check(@shelters.clothing) %> </p>
+    <p> Bathroom Services: <%= boolean_check(@shelters.restroom_service) %> </p>
+    <p> Counselling Services: <%= boolean_check(@shelters.counselling_service) %> </p>
+
+    </div>
    
    
   </article>
