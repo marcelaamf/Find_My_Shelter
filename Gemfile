@@ -44,6 +44,8 @@ gem 'rmagick'
 gem 'faker'
 gem 'carrierwave'
 
+# API to Google Maps
+gem 'google-maps'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
