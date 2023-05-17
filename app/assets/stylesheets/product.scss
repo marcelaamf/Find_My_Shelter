@@ -10,10 +10,10 @@
 
     h1 {
       font-size: 1em;
-      color: rgba(0, 130, 29, 0.7);
+      color: rgb(57, 141, 192);
     }
     a {
-      color: rgba(0, 130, 29, 1);
+      color: rgb(57, 141, 192);
     }
   }
 
@@ -39,7 +39,7 @@
       margin: 0 auto;
       display: block;
       border-radius: 0.25em;
-      border: 0.1em solid rgba(0, 130, 29, 0.8);
+      border: 0.1em solid rgb(57, 141, 192);
 
       @media screen and (max-width: 1000px) {
         width: auto;
