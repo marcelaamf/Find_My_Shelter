@@ -55,6 +55,7 @@ cat1.shelters.create!({
   address: "102 11 Ave SE, Calgary, AB T2G 0X5",
   phone: "1·833·GIV·HOPE (448·4673)",
   email:"info@theseed.ca",
+  description:"The Mustard Seed is a Christian non-profit organization that has been caring for individuals experiencing homelessness and poverty since 1984. Operating in five cities across Alberta and British Columbia, The Mustard Seed is a supportive haven where people can have their physical, mental, and spiritual needs met and grow toward greater health and independence.",
 })
 
 cat1.shelters.create!({
@@ -74,6 +75,7 @@ cat1.shelters.create!({
   address: "203 15 Avenue SE, Calgary, AB T2G 1G4",
   phone: "403-234-7388",
   email:"info@alphahousecalgary.com",
+  description:"Alpha House Society is a non-profit, charitable agency providing safe and caring environments for individuals whose lives are affected by alcohol and other substance dependencies. Calgary Alpha House Society was established in 1981 as a committed response to a marginalized population of men and women who are addicted to alcohol or other drugs and living vulnerable on the streets of Calgary.",
 })
 
 cat2.shelters.create!({
@@ -93,6 +95,8 @@ cat2.shelters.create!({
   address: "500-1509 Centre St SW, Calgary, AB T2G 2E6",
   phone: "403.539.5129",
   email:"info@cwes.ca",
+  description:"The Calgary Women’s Emergency Shelter is focused on ending family violence and abuse in the lives of women, children, and youth. Taking a Stand Against Family Violence in the community since 1974, the agency has helped over 260,000 Calgarians build safe lives and healthy relationships. We are on the front lines to provide hope and support to some of the most vulnerable members of our community. Taking a Stand Against Family Violence in the community since 1974, the agency has helped over 260,000 Calgarians build safe lives and healthy relationships. We are on the front lines to provide hope and support to some of the most vulnerable members of our community.
+  Though the Emergency Shelter is the cornerstone of the organization, it is “More than a Shelter”, serving approximately 15,000 clients each year through a number of innovative safety, healing and prevention programs.",
 })
 
 cat3.shelters.create!({
@@ -112,6 +116,7 @@ cat3.shelters.create!({
   address: "123-500 South St SE, Calgary, AB T2G 9A1",
   phone: "403.411.4319",
   email:"info@li.ca",
+  description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam convallis ante id nulla ultricies pulvinar. Quisque placerat ac ligula et tempus. Aenean ac nulla vel dolor lacinia sodales. Fusce vitae dui non nunc pretium convallis. Curabitur faucibus pretium lacus eget consequat. Aliquam eleifend, tellus nec imperdiet feugiat, neque dui luctus massa, a laoreet ligula nisl vel felis. Suspendisse et urna est. Ut vehicula purus in orci elementum tristique. In tempor sem a urna tempus gravida.",
 })
 
 # cat1.products.create!({
