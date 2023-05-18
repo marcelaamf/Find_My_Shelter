@@ -11,6 +11,7 @@ module New
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1
     config.assets.paths << Rails.root.join('app', 'assets', 'images')
+   
     Google::Maps.configure do |config|
       config.authentication_mode = Google::Maps::Configuration::API_KEY
       config.api_key = 'GOOGLE_MAPS_API_KEY'

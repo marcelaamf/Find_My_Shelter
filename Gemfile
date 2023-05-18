@@ -46,6 +46,9 @@ gem 'carrierwave'
 
 # API to Google Maps
 gem 'google-maps'
+gem 'google_maps_service'
+gem 'geocoder'
+
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
