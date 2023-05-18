@@ -5,6 +5,17 @@
         TEST 2
       </p>
       
+      
+      
+      <div id="map" style="height: 400px;"></div>
+      
+      <script>
+        google.maps.event.addDomListener(window, 'load', initMap);
+      </script>
+      
+      <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_MAPS_API_KEY'] %>&callback=initMap" async defer></script>
+      
+
          <p>
         We have a wide variety of plants and flowers available for purchase on our website. Whether you're looking for something small and delicate or big and bold, we have the perfect plant for you. We also carry a selection of accessories, including potting soil, pots and containers, watering cans, and more.
       </p>

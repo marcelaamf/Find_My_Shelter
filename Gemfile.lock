@@ -113,6 +113,7 @@ GEM
     ffi (1.15.5)
     font-awesome-rails (4.7.0.8)
       railties (>= 3.2, < 8.0)
+    geocoder (1.8.1)
     globalid (1.0.0)
       activesupport (>= 5.0)
     google-maps (3.0.7)
@@ -120,8 +121,13 @@ GEM
       httpclient (~> 2.7, >= 2.7.1)
       multi_json (>= 1.15)
       ruby-hmac (~> 0.4.0)
+    google_maps_service (0.4.2)
+      hurley (~> 0.1)
+      multi_json (~> 1.11)
+      retriable (~> 2.0)
     hashie (4.1.0)
     httpclient (2.8.3)
+    hurley (0.2)
     i18n (1.10.0)
       concurrent-ruby (~> 1.0)
     image_processing (1.12.2)
@@ -216,6 +222,7 @@ GEM
     rdoc (6.4.0)
       psych (>= 4.0.0)
     regexp_parser (2.3.1)
+    retriable (2.1.0)
     rexml (3.2.5)
     rmagick (4.2.5)
     rspec-core (3.11.0)
@@ -312,7 +319,9 @@ DEPENDENCIES
   dotenv-rails
   faker
   font-awesome-rails
+  geocoder
   google-maps
+  google_maps_service
   jbuilder (~> 2.7)
   jquery-rails
   listen (~> 3.3)
