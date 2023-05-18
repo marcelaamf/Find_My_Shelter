@@ -2,7 +2,7 @@ class CategoriesController < ApplicationController
 
   def index
     @categories = Category.all.order(created_at: :desc)
-    @shelters = Shelter.all
+    @shelters = Shelter.select(:id, :name, :address).all
 
   
   end
