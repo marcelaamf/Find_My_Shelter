@@ -1,0 +1,29 @@
+<section class="admin-products-index">
+
+  <header class="page-header">
+    <h1>Admin &raquo; All Shelters</h1>
+  </header>
+
+  <div class="well">
+    <%= link_to '+ New Shelter', [:new, :admin, :shelter], class: 'btn btn-info' %>
+  </div>
+
+  <div class="panel panel-default products">
+
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Shelter</th>
+          <th>Category</th>
+          <th>Current Residents</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render @shelters %>
+      </tbody>
+    </table>
+
+  </div>
+
+</section>

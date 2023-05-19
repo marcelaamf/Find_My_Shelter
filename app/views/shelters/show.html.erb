@@ -1,37 +1,41 @@
 <section class="shelter-show">
   <header class="page-header">
-    <h1> <%= @shelters.name %> <h1>
-    <h5>A: <%= @shelters.address %> </h5> 
-    <h5> P: <%= @shelters.phone %> </h5> 
-    <h5>E: <%= @shelters.email %> </h5>
+    <h1> <%= @shelter.name %> <h1>
+    <h5>A: <%= @shelter.address %> </h5> 
+    <h5> P: <%= @shelter.phone %> </h5> 
+    <h5>E: <%= @shelter.email %> </h5>
+    <% if @shelter.website %>
+    <h5><%= link_to "#{@shelter.website}", "#{@shelter.website}", :target => "_blank" %></h5>
+    <% end %>
+    <h5>
   </header>
   <article class="shelter-detail">
     <div>
-    <p><%= @shelters.description %></p>
-    <% if @shelters.accept_woman %>
-      <p> Women Accomodation: <%= @shelters.women_capacity%> </p>
+    <p><%= @shelter.description %></p>
+    <br>
+    <% if @shelter.accept_woman %>
+      <p> Women availability: <%= @shelter.women_capacity - @shelter.current_women %>/<%= @shelter.women_capacity %> spots</p>
       <% else %>
-      <p> Women Accomodation: Not Available</p>
+      <p> Women availability: Not Available</p>
     <% end %>
-    <% if @shelters.accept_man %>
-      <p> Men Accomodation: <%= @shelters.men_capacity%> </p>
+    <% if @shelter.accept_man %>
+      <p> Men availability: <%= @shelter.men_capacity - @shelter.current_men %>/<%= @shelter.men_capacity %> spots</p>
       <% else %>
-      <p> Men Accomodation: Not Available</p>
+      <p> Men availability: Not Available</p>
     <% end %>
-    <% if @shelters.accept_kids %>
-      <p> Children Accomodation: <%= @shelters.children_capacity%> </p>
+    <% if @shelter.accept_kids %>
+      <p> Children availability: <%= @shelter.children_capacity - @shelter.current_children %>/<%= @shelter.children_capacity %> spots</p>
       <% else %>
-      <p> Children Accomodation: Not Available</p>
+      <p> Children availability: Not Available</p>
     <% end %>
-    <p> Current Residents: <%= @shelters.current_residents %>/<%= @shelters.women_capacity + @shelters.men_capacity + @shelters.children_capacity %>
-    <p> Cafeteria Available: <%= boolean_check(@shelters.cafeteria) %> </p>
-    <p> Clothing Available: <%= boolean_check(@shelters.clothing) %> </p>
-    <p> Bathroom Services: <%= boolean_check(@shelters.restroom_service) %> </p>
-    <p> Counselling Services: <%= boolean_check(@shelters.counselling_service) %> </p>
-
+    <p> Current Residents: <%= @shelter.current_women + @shelter.current_men + @shelter.current_children %>/<%= @shelter.women_capacity + @shelter.men_capacity + @shelter.children_capacity %>
+    <h3>Amenities</h3>
+    <p> Cafeteria Available: <%= boolean_check(@shelter.cafeteria) %> </p>
+    <p> Clothing Available: <%= boolean_check(@shelter.clothing) %> </p>
+    <p> Bathroom Services: <%= boolean_check(@shelter.restroom_service) %> </p>
+    <p> Counselling Services: <%= boolean_check(@shelter.counselling_service) %> </p>
     </div>
-   
-   
+
   </article>
 
 </section>
