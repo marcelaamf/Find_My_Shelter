@@ -1,3 +1,10 @@
+function loadMap() {
+  console.log("Loading map...");
+  var sheltersData = document.getElementById('map').dataset.shelters;
+  var shelters = JSON.parse(sheltersData);
+  initMap(shelters);
+}
+
 function initMap(shelters) {
   console.log("function init is called");
   if (navigator.geolocation) {

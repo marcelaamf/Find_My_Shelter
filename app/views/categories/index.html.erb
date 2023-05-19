@@ -1,25 +1,13 @@
 <section class="products-index">
   <header class="page-header">
+  <p>
+  Find My Shelter connects those in need with reliable resources, fostering hope and support in challenging times. <br> Our goal is to ebable individuals to access immediate assistance and find a safe haven tailored to their unique circumstances.
+  </p>
+  <p> Find a shelter nearby on the map, or select a type of Shelter. </p>
 
-  <div class="dropdown">
-    <%= select_tag 'category', options_for_select(['Select a category', 'Option 2', 'Option 3']), class: 'form-control' %>
-  </div>
-<br>
-      <div id="map" style="height: 400px;" data-shelters="<%= @shelters.to_json %>"></div>
-      <script>
-      function loadMap() {
-        console.log("Loading map...");
-        var sheltersData = document.getElementById('map').dataset.shelters;
-        var shelters = JSON.parse(sheltersData);
-        initMap(shelters);
-      }
-    </script>
-    
-    <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_MAPS_API_KEY'] %>&callback=loadMap" async defer></script>
-         <p>
-        We have a wide variety of plants and flowers available for purchase on our website. Whether you're looking for something small and delicate or big and bold, we have the perfect plant for you. We also carry a selection of accessories, including potting soil, pots and containers, watering cans, and more.
-      </p>
-    </div>
+  <div id="map" style="height: 400px;" data-shelters="<%= @shelters.to_json %>"></div>
+
+  
   </header>
 
   <div class="products">
@@ -30,3 +18,5 @@
 <a id="info-window-content" href="#" style="display: none;">
   Go to Shelter
 </a>
+
+
