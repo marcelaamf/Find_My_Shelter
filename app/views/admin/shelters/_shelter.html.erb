@@ -8,7 +8,10 @@
     <%= shelter.category.name %>
   </td>
   <td>
-    <%= shelter.current_residents %>
+    <%= shelter.current_women + shelter.current_men + shelter.current_children %> Total<br>
+    <%= shelter.current_women %> Women<br>
+    <%= shelter.current_men %> Men<br>
+    <%= shelter.current_children %> Children
   </td>
   <td>
     <%= link_to fa_icon('trash'), [:admin, shelter], class: 'btn btn-sm btn-danger', method: :delete, data: { confirm: "Are you sure?" } %>

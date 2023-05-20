@@ -3,38 +3,36 @@
   <div>
     <%= image_tag @shelter.image.url, class: 'main-img' %>
     <div>
-        <h1> <%= @shelter.name %> <h1>
-        <h6>A: <%= @shelter.address %> </h6> 
-        <h6> P: <%= @shelter.phone %> </h6> 
-        <h6>E: <%= @shelter.email %> </h6>
-        <% if @shelter.website %>
-        <h6>W: <%= link_to "#{@shelter.website}", "#{@shelter.website}", :target => "_blank" %></h6>
-      <% end %>
-      </div>
+      <h1> <%= @shelter.name %> <h1>
+      <h6>A: <%= @shelter.address %> </h6> 
+      <h6> P: <%= @shelter.phone %> </h6> 
+      <h6>E: <%= @shelter.email %> </h6>
+      <h6>W: <%= link_to "#{@shelter.website}", "#{@shelter.website}", :target => "_blank" %></h6>
+    </div>
   </div>
   </header>
-  
+
   <article class="shelter-detail">
-   
+
     <div>
-    <p><%= @shelter.description %></p>
-    <div><h3> Accommodation Availability: </h3> 
-    <% if @shelter.accept_woman %>
-      <p> Women: <%= @shelter.women_capacity - @shelter.current_women %> / <%= @shelter.women_capacity %> spots</p>
-      <% else %>
-      <p> Women Accommodation Not Available</p>
-    <% end %>
-    <% if @shelter.accept_man %>
-      <p> Men: <%= @shelter.men_capacity - @shelter.current_men %> / <%= @shelter.men_capacity %> spots</p>
-      <% else %>
-      <p> Men Accommodation Not Available</p>
-    <% end %>
-    <% if @shelter.accept_kids %>
-      <p> Children: <%= @shelter.children_capacity - @shelter.current_children %> / <%= @shelter.children_capacity %> spots</p>
-      <% else %>
-      <p> Children Accommodation Not Available</p>
-    <% end %>
-    <p> Current Ocuppancy: <%= @shelter.current_women + @shelter.current_men + @shelter.current_children %> / <%= @shelter.women_capacity + @shelter.men_capacity + @shelter.children_capacity %>
+      <p><%= @shelter.description %></p>
+      <div><h3> Accommodation Availability: </h3>
+      <% if @shelter.accept_woman %>
+        <p> Women: <%= @shelter.women_capacity - @shelter.current_women %> / <%= @shelter.women_capacity %> spots</p>
+        <% else %>
+        <p> Women Accommodation Not Available</p>
+      <% end %>
+      <% if @shelter.accept_man %>
+        <p> Men: <%= @shelter.men_capacity - @shelter.current_men %> / <%= @shelter.men_capacity %> spots</p>
+        <% else %>
+        <p> Men Accommodation Not Available</p>
+      <% end %>
+      <% if @shelter.accept_kids %>
+        <p> Children: <%= @shelter.children_capacity - @shelter.current_children %> / <%= @shelter.children_capacity %> spots</p>
+        <% else %>
+        <p> Children Accommodation Not Available</p>
+      <% end %>
+      <p> Current Ocuppancy: <%= @shelter.current_women + @shelter.current_men + @shelter.current_children %> / <%= @shelter.women_capacity + @shelter.men_capacity + @shelter.children_capacity %>
     
     <h3>Amenities</h3>
     <p> Cafeteria Available: <%= boolean_check(@shelter.cafeteria) %> </p>
