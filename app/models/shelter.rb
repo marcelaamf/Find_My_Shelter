@@ -1,5 +1,5 @@
 class Shelter < ApplicationRecord
- 
+  mount_uploader :image, SheltersImageUploader
   belongs_to :category
 
   validates :name, presence: true
