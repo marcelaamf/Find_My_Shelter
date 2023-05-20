@@ -87,6 +87,11 @@ ActiveRecord::Schema.define(version: 2023_05_20_064752) do
     t.float "latitude"
     t.float "longitude"
     t.string "image"
+    t.string "website"
+    t.integer "current_women"
+    t.integer "current_men"
+    t.integer "current_children"
+
   end
 
   create_table "user_specs", force: :cascade do |t|

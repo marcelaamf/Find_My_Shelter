@@ -1,0 +1,16 @@
+<tr>
+  <td>
+    <h4><%= shelter.name %></h4>
+    <br>
+    <p><%= shelter.description %></p>
+  </td>
+  <td>
+    <%= shelter.category.name %>
+  </td>
+  <td>
+    <%= shelter.current_residents %>
+  </td>
+  <td>
+    <%= link_to fa_icon('trash'), [:admin, shelter], class: 'btn btn-sm btn-danger', method: :delete, data: { confirm: "Are you sure?" } %>
+  </td>
+</tr>

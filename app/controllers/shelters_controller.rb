@@ -4,16 +4,7 @@ class SheltersController < ApplicationController
   end
 
   def show
-    @shelters = Shelter.find params[:id]
-  end
-  def create
-    @shelter = Shelter.new(shelter_params)
-
-    if @shelter.save
-      redirect_to [:admin, :shelter], notice: 'Shelter created!'
-    else
-      render :new
-    end
+    @shelter = Shelter.find params[:id]
   end
 
 end
