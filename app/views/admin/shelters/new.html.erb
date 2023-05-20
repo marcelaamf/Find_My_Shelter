@@ -1,0 +1,141 @@
+<section class="admin-products-new">
+
+  <header class="page-header">
+    <h1>Admin &raquo; New Shelter</h1>
+  </header>
+
+  <div class="well">
+    <%= link_to 'All Shelters', [:admin, :shelters], class: 'btn btn-info' %>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-1">
+      <%= form_for [:admin, @shelter] do |form| %>
+
+        <% if form.object.errors.any? %>
+          <div class="alert alert-danger">
+            <strong>The following errors prevented saving:</strong>
+            <ul>
+              <% form.object.errors.full_messages.each do |error| %>
+                <li><%= error %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+
+        <div class="form-group">
+          <%= form.label :name %>
+          <%= form.text_field :name, class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= form.label :description %>
+          <%= form.text_area :description, class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= form.label :address %>
+          <%= form.text_area :address, class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= form.label :phone %>
+          <%= form.text_area :phone, class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= form.label :email %>
+          <%= form.text_area :email, class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= form.label :website %>
+          <%= form.text_area :website, class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= form.label :category %>
+          <%= form.select :category_id, options_from_collection_for_select(Category.all.order(:name), :id, :name), { include_blank: true }, class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= form.label :Does_this_shelter_accept_youth_only %>
+          <%= form.select :youth_only, [['Yes', true], ['No', false]], class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= form.label :Does_this_shelter_accept_woman %>
+          <%= form.select :accept_woman, [['Yes', true], ['No', false]], class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= form.label :Does_this_shelter_accept_men %>
+          <%= form.select :accept_man, [['Yes', true], ['No', false]], class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= form.label :Does_this_shelter_accept_kids %>
+          <%= form.select :accept_kids, [['Yes', true], ['No', false]], class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= form.label :Women_Capacity %> 
+          <%= form.number_field :women_capacity, value: 0, class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= form.label :Current_Women_Residents %>
+          <%= form.number_field :current_women, value: 0, class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= form.label :Men_Capacity %>
+          <%= form.number_field :men_capacity, value: 0, class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= form.label :Current_Men_Residents %>
+          <%= form.number_field :current_men, value: 0, class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= form.label :Children_Capacity %>
+          <%= form.number_field :children_capacity, value: 0, class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= form.label :Current_Children_Residents %>
+          <%= form.number_field :current_children, value: 0, class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= form.label :Current_Residents %>
+          <%= form.number_field :current_residents, value: 0, class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= form.label :Is_There_a_Cafeteria %>
+          <%= form.select :cafeteria, [['Yes', true], ['No', false]], class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= form.label :Is_clothing_provided %>
+          <%= form.select :clothing, [['Yes', true], ['No', false]], class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= form.label :Are_bathroom_services_provided %>
+          <%= form.select :restroom_service, [['Yes', true], ['No', false]], class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= form.label :Are_councelling_services_provided %>
+          <%= form.select :counselling_service, [['Yes', true], ['No', false]], class: 'form-control' %>
+        </div>
+        <br>
+        <%= form.submit 'Create Shelter', class: 'btn btn-primary' %>
+      <% end %>
+    </div>
+  </div>
+
+</section>

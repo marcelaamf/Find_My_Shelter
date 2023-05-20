@@ -40,9 +40,13 @@ Product.destroy_all
 
 cat1.shelters.create!({
   name:  "The Mustard Seed",
+  website: "https://theseed.ca/",
   women_capacity: 25,
+  current_women: 6,
   men_capacity: 30,
+  current_men: 4,
   children_capacity: 15,
+  current_children: 10,
   current_residents: 20,
   accept_man: true,
   accept_woman: true,
@@ -60,9 +64,13 @@ cat1.shelters.create!({
 
 cat1.shelters.create!({
   name:  "Alpha House",
+  website: "https://alphahousecalgary.com/",
   women_capacity: 15,
+  current_women: 5,
   men_capacity: 25,
+  current_men: 10,
   children_capacity: 0,
+  current_children: 0,
   current_residents: 15,
   accept_man: true,
   accept_woman: true,
@@ -80,9 +88,13 @@ cat1.shelters.create!({
 
 cat2.shelters.create!({
   name:  "Calgary Women's Emergency Shelter",
+  website: "https://www.calgarywomensshelter.com/",
   women_capacity: 30,
+  current_women: 8,
   men_capacity: 0,
+  current_men: 0,
   children_capacity: 30,
+  current_children: 12,
   current_residents: 20,
   accept_man: false,
   accept_woman: true,
@@ -103,9 +115,13 @@ cat2.shelters.create!({
 
 cat3.shelters.create!({
   name:  "Lorem Ipsum",
+  website: "https://www.lipsum.com/",
   women_capacity: 10,
+  current_women: 0,
   men_capacity: 10,
+  current_men: 0,
   children_capacity: 20,
+  current_children: 0,
   current_residents: 0,
   accept_man: true,
   accept_woman: true,

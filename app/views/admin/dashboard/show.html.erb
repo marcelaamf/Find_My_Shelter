@@ -6,13 +6,13 @@
       <table class="table table-bordered">
         <thead>
           <tr>
-            <th>Total Products </th>
+            <th>Total Shelters </th>
             <th>Total Categories</th>
           </tr>
         </thead>
         <tbody>
-        <th> <%= @count[:products]%> </th>
-        <th> <%= @count[:categories]%> </th>
+        <th> <%= link_to @count[:shelters], admin_shelters_path %> </th>
+        <th> <%= link_to @count[:categories], admin_categories_path %> </th>
         </tbody>
         </table>
   </div>

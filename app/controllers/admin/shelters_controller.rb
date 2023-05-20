@@ -7,13 +7,13 @@ class Admin::SheltersController < ApplicationController
   end
 
   def new
-    @shelters = Shelter.new
+    @shelter = Shelter.new
   end
 
   def create
-    @shelters = Shelter.new(product_params)
+    @shelter = Shelter.new(shelter_params)
 
-    if @shelters.save
+    if @shelter.save
       redirect_to [:admin, :shelters], notice: 'Shelter created!'
     else
       render :new
@@ -31,9 +31,26 @@ class Admin::SheltersController < ApplicationController
   def shelter_params
     params.require(:shelter).permit(
       :name,
+      :description,
       :address,
       :category_id,
-      :current_residents,
+      :phone,
+      :email,
+      :website,
+      :accept_man,
+      :men_capacity,
+      :current_men,
+      :accept_woman,
+      :women_capacity,
+      :current_women,
+      :accept_kids,
+      :children_capacity,
+      :current_children,
+      :youth_only,
+      :clothing,
+      :restroom_service,
+      :counselling_service,
+      :cafeteria
     )
   end
 
