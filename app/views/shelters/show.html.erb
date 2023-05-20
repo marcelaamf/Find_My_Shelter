@@ -1,5 +1,6 @@
 <section class="shelter-show">
   <header class="page-header">
+
     <h1> <%= @shelter.name %> <h1>
     <h5>A: <%= @shelter.address %> </h5> 
     <h5> P: <%= @shelter.phone %> </h5> 
@@ -8,8 +9,11 @@
     <h5><%= link_to "#{@shelter.website}", "#{@shelter.website}", :target => "_blank" %></h5>
     <% end %>
     <h5>
+
   </header>
+  
   <article class="shelter-detail">
+
     <div>
     <p><%= @shelter.description %></p>
     <br>
@@ -34,6 +38,7 @@
     <p> Clothing Available: <%= boolean_check(@shelter.clothing) %> </p>
     <p> Bathroom Services: <%= boolean_check(@shelter.restroom_service) %> </p>
     <p> Counselling Services: <%= boolean_check(@shelter.counselling_service) %> </p>
+
     </div>
 
   </article>

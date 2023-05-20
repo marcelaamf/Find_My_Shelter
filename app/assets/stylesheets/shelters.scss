@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 main section.shelter-index,
 main section.categories-show {
-  .products {
+  .shelters {
     // display: flex;
     // flex-direction: row;
     // flex-wrap: wrap;
@@ -22,17 +22,7 @@ main section.categories-show {
       grid-template-columns: 1fr;
     }
     article {
-      .soldout {
-        min-width: 110px;
-        background: rgba(224, 14, 14, 0.8);
-        border: 1px solid rgba(224, 14, 14, 0.8);
-        border-radius: 0.25em;
-        color: white;
-        padding: 0.375rem 0.75rem;
-        font-size: 1rem;
-        border-radius: 0.25rem;
-      }
-
+      
       a {
         text-decoration: none;
       }
@@ -41,20 +31,19 @@ main section.categories-show {
       position: relative;
       text-align: center;
       border-radius: 0.25em;
-      border: 0.1em solid rgba(0, 130, 29, 0.3);
-      box-shadow: rgba(0, 130, 29, 0.16) 0px 3px 6px, rgba(0, 130, 29, 0.23) 0px 3px 6px;
+      border: 0.1em solid rgb(57, 141, 192);
+      box-shadow: rgba(0, 130, 29, 0.16) 0px 3px 6px, rgb(57, 141, 192) 0px 3px 6px;
       // transition: opacity 300ms linear;
 
       &:hover {
         transition: all 150ms linear;
-        background-color: rgba(0, 130, 29, 0.7);
-        h1 {
-          color: white;
+        background-color: rgb(57, 141, 192);
+        color: white;
         }
 
         button {
           background: white;
-          color: rgba(0, 130, 29, 0.7);
+          color: rgb(57, 141, 192)
         }
       }
       img {
@@ -70,7 +59,7 @@ main section.categories-show {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        color: rgba(0, 130, 29, 0.7);
+        color: rgb(57, 141, 192);
         font-weight: 700;
         font-family: "Montserrat";
         span {
@@ -92,10 +81,10 @@ main section.categories-show {
           min-width: 110px;
           padding-left: 1em;
           padding-right: 1em;
-          background-color: rgba(0, 130, 29, 0.7);
+          background-color: rgb(57, 141, 192);
           color: white;
         }
       }
     }
   }
-}
+

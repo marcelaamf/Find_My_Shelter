@@ -15,7 +15,7 @@
 // Global
 body {
   // padding-top: 70px;
-  font-size: 20px;
+  font-size: 1.1em;
   font-family: "Source Sans Pro", sans-serif;
 }
 h1,
@@ -111,11 +111,23 @@ form.button_to {
 .page-header {
   margin: 3em 0;
   h1 {
-  color: green;
+  color: rgb(57, 141, 192);
   }
 }
 .text-danger {
   color: #f38792 !important;
+}
+
+.text-muted{
+text-decoration: none;
+font-size: medium;
+}
+
+.login_signup{
+  margin-left: 10%;
+}
+.shelter_housing{
+  color:  rgb(57, 141, 192);
 }
 
 @media screen and (max-width: 1000px) {
@@ -133,7 +145,7 @@ form.button_to {
     align-items: center;
   
     &.small {
-      height: 50vh;
+      height: 30vh;
   
       nav {
         display: none;
@@ -142,5 +154,8 @@ form.button_to {
         display: none;
       }
     }
+  }
+  .login_signup{
+    margin-left: 4%;
   }
 }

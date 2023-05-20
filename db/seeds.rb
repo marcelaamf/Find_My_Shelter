@@ -59,7 +59,7 @@ cat1.shelters.create!({
   address: "102 11 Ave SE, Calgary, AB T2G 0X5",
   phone: "1·833·GIV·HOPE (448·4673)",
   email:"info@theseed.ca",
-  description:"The Mustard Seed is a Christian non-profit organization that has been caring for individuals experiencing homelessness and poverty since 1984. Operating in five cities across Alberta and British Columbia, The Mustard Seed is a supportive haven where people can have their physical, mental, and spiritual needs met and grow toward greater health and independence.",
+  description:"The Mustard Seed is a Christian non-profit organization that has been caring for individuals experiencing homelessness and poverty since 1984.\nOperating in five cities across Alberta and British Columbia, The Mustard Seed is a supportive haven where people can have their physical, mental, and spiritual needs met and grow toward greater health and independence.",
 })
 
 cat1.shelters.create!({
@@ -83,7 +83,7 @@ cat1.shelters.create!({
   address: "203 15 Avenue SE, Calgary, AB T2G 1G4",
   phone: "403-234-7388",
   email:"info@alphahousecalgary.com",
-  description:"Alpha House Society is a non-profit, charitable agency providing safe and caring environments for individuals whose lives are affected by alcohol and other substance dependencies. Calgary Alpha House Society was established in 1981 as a committed response to a marginalized population of men and women who are addicted to alcohol or other drugs and living vulnerable on the streets of Calgary.",
+  description:"Alpha House Society is a non-profit, charitable agency providing safe and caring environments for individuals whose lives are affected by alcohol and other substance dependencies.\nCalgary Alpha House Society was established in 1981 as a committed response to a marginalized population of men and women who are addicted to alcohol or other drugs and living vulnerable on the streets of Calgary.",
 })
 
 cat2.shelters.create!({
@@ -107,8 +107,10 @@ cat2.shelters.create!({
   address: "500-1509 Centre St SW, Calgary, AB T2G 2E6",
   phone: "403.539.5129",
   email:"info@cwes.ca",
-  description:"The Calgary Women’s Emergency Shelter is focused on ending family violence and abuse in the lives of women, children, and youth. Taking a Stand Against Family Violence in the community since 1974, the agency has helped over 260,000 Calgarians build safe lives and healthy relationships. We are on the front lines to provide hope and support to some of the most vulnerable members of our community. Taking a Stand Against Family Violence in the community since 1974, the agency has helped over 260,000 Calgarians build safe lives and healthy relationships. We are on the front lines to provide hope and support to some of the most vulnerable members of our community.
-  Though the Emergency Shelter is the cornerstone of the organization, it is “More than a Shelter”, serving approximately 15,000 clients each year through a number of innovative safety, healing and prevention programs.",
+  description:"The Calgary Women’s Emergency Shelter is focused on ending family violence and abuse in the lives of women, children, and youth.
+  \nTaking a Stand Against Family Violence in the community since 1974, the agency has helped over 260,000 Calgarians build safe lives and healthy relationships.
+  \nWe are on the front lines to provide hope and support to some of the most vulnerable members of our community. 
+  \nThough the Emergency Shelter is the cornerstone of the organization, it is “More than a Shelter”, serving approximately 15,000 clients each year through a number of innovative safety, healing and prevention programs.",
 })
 
 cat3.shelters.create!({
