@@ -25,6 +25,7 @@
     h3 {
       font-size: 0.9em;
       color: rgb(57, 141, 192);
+      margin-top: 0.9em;
      
     }
 
@@ -35,7 +36,6 @@
       justify-content: center;
       flex-direction: column;
       margin-bottom: 1.0em;
-      border: solid 1px rgb(57, 141, 192);
       padding: 0.5em;
       & > p {
         margin-bottom: 0;
@@ -73,5 +73,9 @@
       font-weight: 700;
     }
     
+  }
+
+  .main-img {
+    margin: 1.0em auto;
   }
 }
