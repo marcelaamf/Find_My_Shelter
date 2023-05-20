@@ -6,17 +6,13 @@
   <p> Find a shelter nearby on the map, or select a type of Shelter. </p>
 
   <div id="map" style="height: 400px;" data-shelters="<%= @shelters.to_json %>"></div>
-
-  
   </header>
 
+  <h4 class="shelter_housing"> Shelter & Housing types: </h4>
   <div class="products">
     <%= render @categories %>
   </div>
 </section>
 
-<a id="info-window-content" href="#" style="display: none;">
-  Go to Shelter
-</a>
 
 

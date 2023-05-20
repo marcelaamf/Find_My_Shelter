@@ -22,8 +22,25 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">  <%= link_to 'About', :about, class: 'nav-link px-2' %> </li>
-        <li class="nav-item"> <%= link_to 'Admin', [:admin, :root], class: 'nav-link px-2' %> </li>
+      <%# <li class="nav-item dropdown">
+      <a
+        class="nav-link dropdown-toggle"
+        href="#"
+        id="navbarDropdown"
+        role="button"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      > %>
+        <%# Categories %>
+      <%# </a>
+      <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown"> %>
+        <% Category.all.each do |category| %>
+        <li class="nav-item">
+          <%= link_to category.name, category, class: "nav-link" %>
+        </li>
+        <% end %>
+        <li class="nav-item">  <%= link_to 'About Us', :about, class: 'nav-link' %> </li>
+        <li class="nav-item"> <%= link_to 'Admin', [:admin, :root], class: 'nav-link' %> </li>
       </ul>
         
 
@@ -34,11 +51,13 @@
      </div>
   </div>
 </nav>
-<% if current_user %>
+<div class="login_signup">
+  <% if current_user %>
      <span> Signed in as <%= current_user.first_name %> &nbsp | &nbsp <%= link_to "Logout", '/logout', class: 'text-muted' %> </span
-    <% else %>
+  <% else %>
      <%= link_to 'Login', '/login',  class: 'text-muted' %> &nbsp | &nbsp <%= link_to 'Signup', '/signup', class: 'text-muted' %>
-    <% end %>
+  <% end %>
+  </div>
 <script>
 (function(){
 const gnr = () => {

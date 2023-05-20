@@ -1,0 +1,77 @@
+// Place all the styles related to the Product controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.shelter-show {
+  margin-bottom: 5em;
+  .page-header {
+    margin-top: 1em;
+    margin-bottom: 2em;
+
+    h1 {
+      font-size: 1em;
+      color: rgb(57, 141, 192);
+    }
+
+    a {
+      color: rgb(57, 141, 192);
+    }
+  }
+
+  .shelter-detail {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+    h3 {
+      font-size: 0.9em;
+      color: rgb(57, 141, 192);
+     
+    }
+
+    grid-template-columns: 1fr;
+    
+    div {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      margin-bottom: 1.0em;
+      border: solid 1px rgb(57, 141, 192);
+      padding: 0.5em;
+      & > p {
+        margin-bottom: 0;
+      }
+    }
+    img {
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+      display: block;
+      border-radius: 0.25em;
+      border: 0.1em solid rgb(57, 141, 192);
+
+      @media screen and (max-width: 1000px) {
+        width: auto;
+        height: 40vh;
+      }
+
+      @media screen and (max-width: 600px) {
+        width: 100%;
+        height: auto;
+      }
+    }
+    p {
+      text-align: justify;
+    }
+    
+    button {
+      width: 140px;
+      font-size: 1em;
+      padding-left: 1em;
+      padding-right: 1em;
+      background-color: rgba(0, 130, 29, 0.7);
+      color: white;
+      font-weight: 700;
+    }
+    
+  }
+}

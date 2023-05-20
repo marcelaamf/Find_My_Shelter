@@ -1,29 +1,37 @@
 <section class="shelter-show">
   <header class="page-header">
     <h1> <%= @shelters.name %> <h1>
-    <h5>A: <%= @shelters.address %> </h5> 
-    <h5> P: <%= @shelters.phone %> </h5> 
-    <h5>E: <%= @shelters.email %> </h5>
+    <h6>A: <%= @shelters.address %> </h6> 
+    <h6> P: <%= @shelters.phone %> </h6> 
+    <h6>E: <%= @shelters.email %> </h6>
+    <h6>W: ----- </h6> 
+    <h6>Hours: ----- </h6> 
   </header>
+  
   <article class="shelter-detail">
-    <div>
     <p><%= @shelters.description %></p>
+  <div>
+    <h3>Current Accomodation Availability: </h3>
+  
     <% if @shelters.accept_woman %>
-      <p> Women Accomodation: <%= @shelters.women_capacity%> </p>
+      Women: <%= @shelters.women_capacity%> 
       <% else %>
-      <p> Women Accomodation: Not Available</p>
+       Women Accomodation Not Available
     <% end %>
+    <br>
     <% if @shelters.accept_man %>
-      <p> Men Accomodation: <%= @shelters.men_capacity%> </p>
-      <% else %>
-      <p> Men Accomodation: Not Available</p>
+      Men: <%= @shelters.men_capacity%>
+    <% else %>
+      Men Accomodation Not Available
     <% end %>
+    <br>
     <% if @shelters.accept_kids %>
-      <p> Children Accomodation: <%= @shelters.children_capacity%> </p>
-      <% else %>
-      <p> Children Accomodation: Not Available</p>
+      Children: <%= @shelters.children_capacity%>
+    <% else %>
+      Children Accomodation Not Available  
     <% end %>
-    <p> Current Residents: <%= @shelters.current_residents %>/<%= @shelters.women_capacity + @shelters.men_capacity + @shelters.children_capacity %>
+    </div>
+    
     <p> Cafeteria Available: <%= boolean_check(@shelters.cafeteria) %> </p>
     <p> Clothing Available: <%= boolean_check(@shelters.clothing) %> </p>
     <p> Bathroom Services: <%= boolean_check(@shelters.restroom_service) %> </p>
