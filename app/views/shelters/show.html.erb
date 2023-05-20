@@ -14,11 +14,14 @@
   
   <article class="shelter-detail">
 
+  <%= image_tag @shelters.image.url, class: 'main-img' %>
+   
     <div>
     <p><%= @shelter.description %></p>
     <br>
     <% if @shelter.accept_woman %>
       <p> Women availability: <%= @shelter.women_capacity - @shelter.current_women %>/<%= @shelter.women_capacity %> spots</p>
+
       <% else %>
       <p> Women availability: Not Available</p>
     <% end %>
