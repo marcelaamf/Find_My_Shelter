@@ -1,6 +1,6 @@
 <article>
   <%= link_to shelter_path(shelter) do %>
-  
+    <%= image_tag shelter.image.thumb.url , alt: shelter.name %>
     <h1>
       <span><%= shelter.name %></span>
     </h1>
