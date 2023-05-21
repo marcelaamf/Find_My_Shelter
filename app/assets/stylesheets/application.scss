@@ -127,7 +127,8 @@ font-size: medium;
   margin-left: 10%;
 }
 .shelter_housing{
-  color:  rgb(57, 141, 192);
+  color:  rgb(98, 98, 98);
+  margin-bottom: 0.7em;
 }
 
 @media screen and (max-width: 1000px) {
@@ -157,5 +158,18 @@ font-size: medium;
   }
   .login_signup{
     margin-left: 4%;
+  }
+
+}
+#marker-content{
+  padding-bottom: 1em;
+  padding-right: 1em;
+  a {
+    color:  rgb(57, 141, 192);
+    text-decoration: none;
+    font-weight: 500;
+   
+    
+   
   }
 }

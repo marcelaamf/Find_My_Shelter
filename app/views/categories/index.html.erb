@@ -1,4 +1,4 @@
-<section class="products-index">
+<section class="shelters-index">
   <header class="page-header">
   <p>
   Find My Shelter connects those in need with reliable resources, fostering hope and support in challenging times. <br> Our goal is to ebable individuals to access immediate assistance and find a safe haven tailored to their unique circumstances.
@@ -7,10 +7,11 @@
 
   <div id="map" style="height: 400px;" data-shelters="<%= @shelters.to_json %>"></div>
   </header>
-
+<div class="shelter_categories">
   <h4 class="shelter_housing"> Shelter & Housing types: </h4>
-  <div class="products">
+  <div class="shelters">
     <%= render @categories %>
+  </div>
   </div>
 </section>
 

@@ -1,7 +1,7 @@
 // Place all the styles related to the shelters controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-main section.shelter-index,
+main section.shelters-index,
 main section.categories-show {
   .shelters {
     // display: flex;
@@ -29,7 +29,7 @@ main section.categories-show {
       font-family: "Montserrat";
       width: 100%;
       position: relative;
-      text-align: center;
+      // text-align: center;
       border-radius: 0.25em;
       border: 0.1em solid rgb(57, 141, 192);
       box-shadow: rgba(0, 130, 29, 0.16) 0px 3px 6px, rgb(57, 141, 192) 0px 3px 6px;
@@ -64,11 +64,16 @@ main section.categories-show {
         font-weight: 700;
         font-family: "Montserrat";
         span {
-          font-size: 0.8em;
+          font-size: 1.0em;
         }
         span:last-of-type {
           font-size: 0.5em;
         }
+        &:hover {
+          transition: all 150ms linear;
+          background-color: rgb(57, 141, 192);
+          color: white;
+          }
       }
       div {
         display: flex;
@@ -85,6 +90,18 @@ main section.categories-show {
           background-color: rgb(57, 141, 192);
           color: white;
         }
+      }
+      .address {
+        margin: 0;
+        padding: 0.2em 0.7em ;
+        color:rgb(120, 120, 120);
+        font-weight: light;
+        font-family: "Montserrat";
+        font-size: 0.7em;
+        text-align: left;
+        &:hover {
+            color: white;
+          }
       }
     }
   }
