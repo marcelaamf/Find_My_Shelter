@@ -37,7 +37,7 @@ function initMap(shelters) {
               });
 
               // Create the content for the info window
-              var content = '<div><strong><a href="/shelters/' + shelterId + '">' + shelterName + '</a></strong></div>'
+              var content = '<div id="marker-content"><a href="/shelters/' + shelterId + '">' + shelterName + '</a></div>'
 
               // Add a click event listener to the marker
               marker.addListener("click", function () {

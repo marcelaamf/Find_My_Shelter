@@ -1,9 +1,11 @@
 <article>
   <%= link_to shelter_path(shelter) do %>
    <h1>
-      <span><%= shelter.name %></span> 
+      <span><%= shelter.name %>
+      <p class="address"><%= shelter.address %> </p> 
+      </span> 
     </h1>
-    <p><%= shelter.address %> </p>
+    
   <% end%>
 
 </article>
