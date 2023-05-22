@@ -11,7 +11,7 @@ Rails.application.routes.draw do
  
   root to: 'categories#index'
     resources :shelters, only: [:index, :show, :edit, :update]
-    resources :categories, only: [:index, :show]
+    resources :categories, only: [:index, :show, :edit, :update]
     resource :cart, only: [:show] do
       post   :add_item
       post   :remove_item
@@ -22,7 +22,7 @@ Rails.application.routes.draw do
   namespace :admin do
     root to: 'dashboard#show'
     resources :shelters, except: [:show]
-    resources :categories, except: [:edit, :update, :show]
+    resources :categories, except: [:show]
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
