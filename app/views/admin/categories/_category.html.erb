@@ -1,5 +1,11 @@
 <tr>
   <%= link_to category_path(category) do %>
-    <td><%= category.name %></td>
+    <td> <%= category.name %> </td> 
   <% end%>
+  <td>
+    <%= link_to fa_icon('trash'), [:admin, category], class: 'btn btn-sm btn-danger', method: :delete, data: { confirm: "Are you sure? By deleting a Category you will delete all shelters related to it." } %>
+  </td>
+  <td>
+    <%= link_to fa_icon('edit'), edit_admin_category_path(category), class: 'btn btn-sm btn-warning' %>
+  </td>
 </tr>
