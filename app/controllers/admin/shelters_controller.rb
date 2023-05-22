@@ -20,6 +20,20 @@ class Admin::SheltersController < ApplicationController
     end
   end
 
+  def edit
+    @shelter = Shelter.find(params[:id])
+  end
+
+  def update
+    @shelter = Shelter.find(params[:id])
+
+    if @shelter.update(shelter_params)
+      redirect_to @shelter
+    else
+      render :edit
+    end
+  end
+
   def destroy
     @shelter = Shelter.find params[:id]
     @shelter.destroy
@@ -50,7 +64,8 @@ class Admin::SheltersController < ApplicationController
       :clothing,
       :restroom_service,
       :counselling_service,
-      :cafeteria
+      :cafeteria,
+      :image
     )
   end
 

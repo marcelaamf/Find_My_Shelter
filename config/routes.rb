@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   post '/users' => 'users#create'
  
   root to: 'categories#index'
-    resources :shelters, only: [:index, :show]
+    resources :shelters, only: [:index, :show, :edit, :update]
     resources :categories, only: [:index, :show]
     resource :cart, only: [:show] do
       post   :add_item
@@ -21,7 +21,7 @@ Rails.application.routes.draw do
 
   namespace :admin do
     root to: 'dashboard#show'
-    resources :shelters, except: [:edit, :update, :show]
+    resources :shelters, except: [:show]
     resources :categories, except: [:edit, :update, :show]
   end
 
