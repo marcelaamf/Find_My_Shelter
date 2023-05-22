@@ -124,7 +124,11 @@ font-size: medium;
 }
 
 .login_signup{
-  margin-left: 10%;
+  margin: 2.0em 3.0em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
 }
 .shelter_housing{
   color:  rgb(98, 98, 98);
@@ -157,9 +161,11 @@ font-size: medium;
     }
   }
   .login_signup{
-    margin-left: 4%;
+    margin: 4%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
-
 }
 #marker-content{
   padding-bottom: 1em;
@@ -167,9 +173,13 @@ font-size: medium;
   a {
     color:  rgb(57, 141, 192);
     text-decoration: none;
-    font-weight: 500;
-   
-    
-   
+    font-weight: 500;  
   }
+}
+
+.btn-info{
+  background-color: #FF5757;
+  border: #FF5757;
+  color: white;
+  font-weight: 600;
 }
