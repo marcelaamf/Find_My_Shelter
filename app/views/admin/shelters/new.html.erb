@@ -127,6 +127,12 @@
           <%= form.label :Are_councelling_services_provided %>
           <%= form.select :counselling_service, [['Yes', true], ['No', false]], class: 'form-control' %>
         </div>
+
+        <div class="form-group">
+          <%= form.label :image %>
+          <%= form.file_field :image %>
+        </div>
+     
         <br>
         <%= form.submit 'Create Shelter', class: 'btn btn-primary' %>
       <% end %>

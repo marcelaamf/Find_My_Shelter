@@ -15,5 +15,7 @@
   </td>
   <td>
     <%= link_to fa_icon('trash'), [:admin, shelter], class: 'btn btn-sm btn-danger', method: :delete, data: { confirm: "Are you sure?" } %>
+    
   </td>
+  <td><%= link_to fa_icon('edit'), edit_admin_shelter_path(shelter), class: 'btn btn-sm btn-warning' %></td>
 </tr>
