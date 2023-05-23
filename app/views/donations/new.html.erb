@@ -1,0 +1,42 @@
+<section class="cart-show">
+  <header class="page-header">
+    <h1>Donate Today</h1>
+  </header>
+  <p>Your support means the world to us as we strive to provide a safe haven for individuals facing difficulties.</p>
+  <p>Your generosity directly impacts the lives of those in need and helps us offer essential services to empower them towards a brighter future.</p>
+  <%= form_for @donation do |f| %>
+    <div>
+      <h5>How much would you like to donate?</h5>
+      <div class="field">
+        <%= f.label :shelter_id %>
+        <br>
+        <%= f.collection_select :shelter_id, Shelter.all, :id, :name %>
+      </div>
+      <br>
+      <div class="field">
+        <%= f.label :donation_amount %> 
+        <br>
+        <%= f.text_field :donation_amount_cents, step: 0.01, min: 0 %>
+      </div>
+      <br>
+      <%= hidden_field_tag :stripeToken %>
+      <%= hidden_field_tag :stripeTokenType %>
+      <%= hidden_field_tag :stripeEmail %>
+      <div class="row">
+        <div class="col-xs-12">
+          <script
+            src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+            data-amount="<%= calculate_donation_amount(f.object.donation_amount_cents.to_f / 100) %>"
+            data-name="Find My Shelter"
+            data-description="Your Donation Today"
+            data-locale="auto"
+            data-email="kvirani@gmail.com"
+            data-currency="cad"
+          >
+          </script>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</section>

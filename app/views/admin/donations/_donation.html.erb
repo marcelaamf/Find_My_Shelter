@@ -1,0 +1,9 @@
+<tr>
+  <td>
+    <%= donation.shelter.name %>
+  </td>
+  <td>
+  <%= number_with_precision(donation.donation_amount_cents.to_f * 0.01, precision: 2) %>
+  
+  </td>
+</tr>

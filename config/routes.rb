@@ -23,8 +23,17 @@ Rails.application.routes.draw do
     root to: 'dashboard#show'
     resources :shelters, except: [:show]
     resources :categories, except: [:show]
+    resources :donations, only: [:index] do
+      collection do
+        get 'filter', to: 'donations#filter'
+      end
+    end
   end
 
+  
+  resources :donations
+
+ 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
