@@ -8,11 +8,13 @@
           <tr>
             <th>Total Shelters </th>
             <th>Total Categories</th>
+            <th>Donations</th>
           </tr>
         </thead>
         <tbody>
         <th> <%= link_to @count[:shelters], admin_shelters_path %> </th>
         <th> <%= link_to @count[:categories], admin_categories_path %> </th>
+        <th> <%= link_to 'All Donations Report', admin_donations_path %> </th>
         </tbody>
         </table>
   </div>

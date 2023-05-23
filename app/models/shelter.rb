@@ -1,6 +1,7 @@
 class Shelter < ApplicationRecord
   mount_uploader :image, SheltersImageUploader
   belongs_to :category
+  has_many :donations
 
   validates :name, presence: true
   validates :address, presence: true

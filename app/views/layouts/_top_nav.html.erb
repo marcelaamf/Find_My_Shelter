@@ -73,7 +73,7 @@
 </nav>
 <div class="login_signup">
 
-<button class="btn btn-info"> Donate Today! </button>
+<button class="btn btn-info"> <%= link_to 'Donate Today!', '/donations/new', class: "btn btn-info" %> </button>
 <span>
   <% if current_user %>
      <span> Signed in as <%= current_user.first_name %> &nbsp | &nbsp <%= link_to "Logout", '/logout', class: 'text-muted' %> </span

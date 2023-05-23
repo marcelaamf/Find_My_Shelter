@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_05_20_064752) do
+ActiveRecord::Schema.define(version: 2023_05_23_034707) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,17 @@ ActiveRecord::Schema.define(version: 2023_05_20_064752) do
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "donations", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "donation_amount_cents"
+    t.bigint "shelter_id", null: false
+    t.string "email"
+    t.integer "total_cents"
+    t.string "stripe_charge_id"
+    t.index ["shelter_id"], name: "index_donations_on_shelter_id"
   end
 
   create_table "line_items", force: :cascade do |t|
@@ -107,6 +118,7 @@ ActiveRecord::Schema.define(version: 2023_05_20_064752) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "donations", "shelters"
   add_foreign_key "line_items", "orders"
   add_foreign_key "line_items", "products"
   add_foreign_key "products", "categories"
