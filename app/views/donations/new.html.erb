@@ -16,9 +16,16 @@
       <div class="field">
         <%= f.label :donation_amount %> 
         <br>
-        <%= f.text_field :donation_amount_cents, step: 0.01, min: 0 %>
+        <%= f.text_field :donation_amount, step: 0.01, min: 0 %>
       </div>
       <br>
+      <% if flash[:notice] %>
+        <div class="flash notice"><%= flash[:notice] %></div>
+      <% end %>
+        <% if flash[:error] %>
+        <div class="flash error"><%= flash[:error] %></div>
+      <% end %>
+
       <%= hidden_field_tag :stripeToken %>
       <%= hidden_field_tag :stripeTokenType %>
       <%= hidden_field_tag :stripeEmail %>
@@ -27,7 +34,7 @@
           <script
             src="https://checkout.stripe.com/checkout.js" class="stripe-button"
             data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-            data-amount="<%= calculate_donation_amount(f.object.donation_amount_cents.to_f / 100) %>"
+            data-amount="<%= calculate_donation_amount(f.object.donation_amount_cents.to_f) %>"
             data-name="Find My Shelter"
             data-description="Your Donation Today"
             data-locale="auto"
