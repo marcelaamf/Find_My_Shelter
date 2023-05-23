@@ -58,6 +58,7 @@ cat1.shelters.create!({
   email:"info@theseed.ca",
   image: open_asset('mustardseed.jpg'),
   description:"The Mustard Seed is a Christian non-profit organization that has been caring for individuals experiencing homelessness and poverty since 1984.\nOperating in five cities across Alberta and British Columbia, The Mustard Seed is a supportive haven where people can have their physical, mental, and spiritual needs met and grow toward greater health and independence.",
+  city:"Calgary",
 })
 
 cat1.shelters.create!({
@@ -82,6 +83,7 @@ cat1.shelters.create!({
   email:"info@alphahousecalgary.com",
   image: open_asset('alphahouse.jpg'),
   description:"Alpha House Society is a non-profit, charitable agency providing safe and caring environments for individuals whose lives are affected by alcohol and other substance dependencies.\nCalgary Alpha House Society was established in 1981 as a committed response to a marginalized population of men and women who are addicted to alcohol or other drugs and living vulnerable on the streets of Calgary.",
+  city:"Calgary",
 })
 
 cat1.shelters.create!({
@@ -108,6 +110,7 @@ cat1.shelters.create!({
   description:"This state-of-the-art facility provides a home to the homeless and those who are at risk of homelessness. 
   \n It’s a place of healing where men women and children fight against homelessness, hunger and despair.
   \n Belkin House reaches out to help people whose lives are battered and broken. Our innovative and unique programs are offered to help residents become well, whole and healed.",
+  city:"Vancouver",
 })
 
 cat2.shelters.create!({
@@ -135,6 +138,7 @@ cat2.shelters.create!({
   \nTaking a Stand Against Family Violence in the community since 1974, the agency has helped over 260,000 Calgarians build safe lives and healthy relationships.
   \nWe are on the front lines to provide hope and support to some of the most vulnerable members of our community. 
   \nThough the Emergency Shelter is the cornerstone of the organization, it is “More than a Shelter”, serving approximately 15,000 clients each year through a number of innovative safety, healing and prevention programs.",
+  city:"Calgary",
 })
 
 cat2.shelters.create!({
@@ -161,6 +165,58 @@ cat2.shelters.create!({
   description:"Since 1978, the Downtown Eastside Women’s Centre has provided a safe space for women and children in the Downtown Eastside.
   \n We provide practical support, basic necessities and hot nutritious meals to over 1000 women and children every day.
   \n We support women to make positive changes in their lives by connecting them to a continuum of services including outreach, advocacy, wellness, recreation, housing and skills development.",
+  city:"Vancouver",
+})
+
+cat2.shelters.create!({
+  name:  "Sherifg King Home ",
+  website: "https://www.ywcalgary.ca/programs/domestic-violence-shelter/",
+  women_capacity: 25,
+  current_women: 16,
+  men_capacity: 0,
+  current_men: 0,
+  children_capacity: 15,
+  current_children: 13,
+  accept_man: false,
+  accept_woman: true,
+  youth_only: false,
+  accept_kids: true,
+  counselling_service: true,
+  clothing: false,
+  restroom_service: true,
+  cafeteria: false,
+  address: "2003 16 St SE, Calgary, AB T2G 5B7",
+  phone: "(403) 266-4111",
+  email:"skreception@ywcalgary.ca",
+  image: open_asset('Sheriff_king.png'),
+  description:"YW Sheriff King Home is a short-stay crisis shelter for women and their children leaving domestic abuse and violence. The shelter provides basic needs, including food and personal items, as well as individual domestic abuse counselling and support.
+  \nDuring their stay and afterwards, women and children can also access one-on-one support and referrals to help children understand and make sense of their experiences and feelings in a safe and supportive environment.",
+  city:"Calgary",
+})
+cat2.shelters.create!({
+  name:  "Awo Taan Healing Lodge Society",
+  website: "http://www.awotaan.org",
+  women_capacity: 35,
+  current_women: 10,
+  men_capacity: 0,
+  current_men: 0,
+  children_capacity: 15,
+  current_children: 13,
+  accept_man: false,
+  accept_woman: true,
+  youth_only: false,
+  accept_kids: true,
+  counselling_service: true,
+  clothing: false,
+  restroom_service: true,
+  cafeteria: false,
+  address: "4517 17 Avenue SE, Calgary",
+  phone: "403-531-1972",
+  email:"awotaan@awotaan.org",
+  image: open_asset('awo_tan.png'),
+  description:"The heartbeat of Awo Taan Healing Lodge Society is our shelter facility, a place of refuge, healing, and hope for vulnerable women and their children in times of crisis. The shelter provides basic needs and housing for up to 32 people for a 3-week period.
+  In addition to meeting basic needs, Awo Taan works to help clients escape cycles of violence or abuse. Our counsellors provide support 24 hours a day, 7 days a week, to connect our clients to further support and guidance",
+  city:"Calgary",
 })
 cat3.shelters.create!({
   name:  "Calgary Dream centre",
@@ -184,7 +240,8 @@ cat3.shelters.create!({
   email:"info@calgarydreamcentre.com",
   image: open_asset('calgary_dream_centre.png'),
   description:"The Calgary Dream Centre is a faith-based recovery organization that is, fittingly enough, built on a dream. We dream that someday, the city of Calgary will not need us anymore. While that idea is still a ways away, we do believe that our passion for our mission and our strong set of core values have paved the way to make a very real, transformative impact in the lives of hundreds of Calgarians.",
-})
+  city:"Calgary",
+  })
 
 cat3.shelters.create!({
   name:  "Salvation Army Harbour Light",
@@ -208,6 +265,7 @@ cat3.shelters.create!({
   email:"N/A",
   image: open_asset('harbourlight.png'),
   description:"Our programs and services make up a continuum of care that includes community meals, 24-hour and overnight shelters, withdrawal management (detox), residential addiction treatment, a correctional halfway house, low-income housing, and much more.",
+  city:"Vancouver",
 })
 
 puts "DONE!"

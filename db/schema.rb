@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_05_23_034707) do
+ActiveRecord::Schema.define(version: 2023_05_23_194832) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -102,6 +102,7 @@ ActiveRecord::Schema.define(version: 2023_05_23_034707) do
     t.integer "current_men"
     t.integer "current_children"
     t.string "image"
+    t.string "city"
   end
 
   create_table "user_specs", force: :cascade do |t|
