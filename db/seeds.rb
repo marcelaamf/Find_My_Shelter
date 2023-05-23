@@ -84,6 +84,32 @@ cat1.shelters.create!({
   description:"Alpha House Society is a non-profit, charitable agency providing safe and caring environments for individuals whose lives are affected by alcohol and other substance dependencies.\nCalgary Alpha House Society was established in 1981 as a committed response to a marginalized population of men and women who are addicted to alcohol or other drugs and living vulnerable on the streets of Calgary.",
 })
 
+cat1.shelters.create!({
+  name:  "Salvation Army Belkin House",
+  website: "https://belkinhousesa.ca/",
+  women_capacity: 40,
+  current_women: 20,
+  men_capacity: 40,
+  current_men: 25,
+  children_capacity: 15,
+  current_children: 10,
+  accept_man: true,
+  accept_woman: true,
+  youth_only: false,
+  accept_kids: true,
+  counselling_service: true,
+  clothing: true,
+  restroom_service: true,
+  cafeteria: true,
+  address: "555 Homer Street, Vancouver, BC V6B 1K8",
+  phone: "(604) 681-3405",
+  email:"administration@belkinhouse.ca",
+  image: open_asset('belkinhouse.png'),
+  description:"This state-of-the-art facility provides a home to the homeless and those who are at risk of homelessness. 
+  \n It’s a place of healing where men women and children fight against homelessness, hunger and despair.
+  \n Belkin House reaches out to help people whose lives are battered and broken. Our innovative and unique programs are offered to help residents become well, whole and healed.",
+})
+
 cat2.shelters.create!({
   name:  "Calgary Women's Emergency Shelter",
   website: "https://www.calgarywomensshelter.com/",
@@ -111,6 +137,31 @@ cat2.shelters.create!({
   \nThough the Emergency Shelter is the cornerstone of the organization, it is “More than a Shelter”, serving approximately 15,000 clients each year through a number of innovative safety, healing and prevention programs.",
 })
 
+cat2.shelters.create!({
+  name:  "Downtown Eastside Women's Centre",
+  website: "https://dewc.ca/",
+  women_capacity: 150,
+  current_women: 100,
+  men_capacity: 0,
+  current_men: 0,
+  children_capacity: 50,
+  current_children: 8,
+  accept_man: false,
+  accept_woman: true,
+  youth_only: false,
+  accept_kids: true,
+  counselling_service: true,
+  clothing: true,
+  restroom_service: false,
+  cafeteria: true,
+  address: "302 Columbia St. Vancouver, BC V6A 4J1",
+  phone: "604.681.8480",
+  email:"admin@dewc.ca",
+  image: open_asset('womensCentre.jpg'),
+  description:"Since 1978, the Downtown Eastside Women’s Centre has provided a safe space for women and children in the Downtown Eastside.
+  \n We provide practical support, basic necessities and hot nutritious meals to over 1000 women and children every day.
+  \n We support women to make positive changes in their lives by connecting them to a continuum of services including outreach, advocacy, wellness, recreation, housing and skills development.",
+})
 cat3.shelters.create!({
   name:  "Calgary Dream centre",
   website: "https://calgarydreamcentre.com/",
@@ -135,6 +186,29 @@ cat3.shelters.create!({
   description:"The Calgary Dream Centre is a faith-based recovery organization that is, fittingly enough, built on a dream. We dream that someday, the city of Calgary will not need us anymore. While that idea is still a ways away, we do believe that our passion for our mission and our strong set of core values have paved the way to make a very real, transformative impact in the lives of hundreds of Calgarians.",
 })
 
+cat3.shelters.create!({
+  name:  "Salvation Army Harbour Light",
+  website: "https://vancouverharbourlightsa.ca/",
+  women_capacity: 20,
+  current_women: 11,
+  men_capacity: 20,
+  current_men: 8,
+  children_capacity: 0,
+  current_children: 0,
+  accept_man: true,
+  accept_woman: true,
+  youth_only: false,
+  accept_kids: false,
+  counselling_service: true,
+  clothing: true,
+  restroom_service: true,
+  cafeteria: true,
+  address: "119 East Cordova Street, Vancouver, BC V6A 1K8",
+  phone: "(604) 646-6800",
+  email:"N/A",
+  image: open_asset('harbourlight.png'),
+  description:"Our programs and services make up a continuum of care that includes community meals, 24-hour and overnight shelters, withdrawal management (detox), residential addiction treatment, a correctional halfway house, low-income housing, and much more.",
+})
 
 puts "DONE!"
 
