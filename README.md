@@ -1,12 +1,14 @@
-# Jungle
+# Find My Shelter
 
-A mini e-commerce application built with Rails 6.1 for purposes of teaching Rails by example.
+Introducing Find My Shelter, a revolutionary mobile application designed to provide immediate assistance to users in need. Find My Shelter is a user-friendly app that empowers individuals to search for nearby shelters based on their needs.
+
+With Find My Shelter, finding the right shelter has never been easier. The app offers a comprehensive database of shelters, categorized by types such as emergency shelters, women's shelters, family shelters, and more. Users can conveniently browse through various shelter options, tailored to their unique circumstances and needs
+
+
+The app utilizes cutting-edge geolocation technology to provide real-time information on shelters nearby. Users can easily view shelter details such as address, contact information, available amenities, and capacity. Each shelter listing includes a description, providing valuable insights into the shelter's mission, services, and any specific criteria for admission.
 
 ## Pictures
-!["Main page"](https://github.com/marcelaamf/jungle-rails/blob/master/docs/home_page.png?raw=true)
-!["Product detail page"](https://github.com/marcelaamf/jungle-rails/blob/master/docs/product_details.png?raw=true)
-!["My Cart"](https://github.com/marcelaamf/jungle-rails/blob/master/docs/my_cart.png?raw=true)
-!["Admin Categories"](https://github.com/marcelaamf/jungle-rails/blob/master/docs/Admin_categories.png?raw=true)
+
 
 ## Setup
 
