@@ -10,7 +10,7 @@ The app utilizes cutting-edge geolocation technology to provide real-time inform
 ## Pictures
 !["Main page mobile"](https://github.com/marcelaamf/Find_My_Shelter/blob/master/app/assets/images/app.png?raw=true)
 !["Shelter category"](https://github.com/marcelaamf/Find_My_Shelter/blob/master/app/assets/images/shelter_category.png?raw=true)
-!["Shelter details"]()
+!["Shelter details"](https://github.com/marcelaamf/Find_My_Shelter/blob/master/app/assets/images/shelter_details.png?raw=true)
 !["Approved donation"](https://github.com/marcelaamf/Find_My_Shelter/blob/master/app/assets/images/donation_app.png?raw=true)
 !["Admin dashboard"](https://github.com/marcelaamf/Find_My_Shelter/blob/master/app/assets/images/dashboard.png?raw=true)
 !["Donation report"](https://github.com/marcelaamf/Find_My_Shelter/blob/master/app/assets/images/donation.png?raw=true)
