@@ -8,6 +8,12 @@ With Find My Shelter, finding the right shelter has never been easier. The app o
 The app utilizes cutting-edge geolocation technology to provide real-time information on shelters nearby. Users can easily view shelter details such as address, contact information, available amenities, and capacity. Each shelter listing includes a description, providing valuable insights into the shelter's mission, services, and any specific criteria for admission.
 
 ## Pictures
+!["Main page mobile"](https://github.com/marcelaamf/Find_My_Shelter/blob/master/app/assets/images/app.png?raw=true)
+!["Shelter category"](https://github.com/marcelaamf/Find_My_Shelter/blob/master/app/assets/images/shelter_category.png?raw=true)
+!["Approved donation"](https://github.com/marcelaamf/Find_My_Shelter/blob/master/app/assets/images/donation_app.png?raw=true)
+!["Admin dashboard"](https://github.com/marcelaamf/Find_My_Shelter/blob/master/app/assets/images/dashboard.png?raw=true)
+!["Donation report"](https://github.com/marcelaamf/Find_My_Shelter/blob/master/app/assets/images/donation.png?raw=true)
+!["Admin Shelters"](https://github.com/marcelaamf/Find_My_Shelter/blob/master/app/assets/images/shelters.png?raw=true)
 
 
 ## Setup
