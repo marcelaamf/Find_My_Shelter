@@ -4,6 +4,8 @@
     <h1>
       <%= @category.name %>
     </h1>
+
+    <div id="map" style="height: 300px;" data-shelters="<%= @shelters_1.to_json %>"></div>
   </header>
 
   <div class="shelters">

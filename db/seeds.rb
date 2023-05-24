@@ -30,6 +30,9 @@ cat1 = Category.find_or_create_by! name: 'Emergency'
 cat2 = Category.find_or_create_by! name: 'Domestic Violence'
 cat3 = Category.find_or_create_by! name: 'Drug Abuse'
 
+
+
+
 ## PRODUCTS
 
 puts "Re-creating Products ..."
@@ -266,6 +269,38 @@ cat3.shelters.create!({
   image: open_asset('harbourlight.png'),
   description:"Our programs and services make up a continuum of care that includes community meals, 24-hour and overnight shelters, withdrawal management (detox), residential addiction treatment, a correctional halfway house, low-income housing, and much more.",
   city:"Vancouver",
+})
+
+shelter1 = Shelter.find_by! id: 1
+shelter2 = Shelter.find_by! id: 2
+shelter3 = Shelter.find_by! id: 3
+
+shelter1.donations.create!({
+  created_at: "2023-05-23 20:19:41.451038",
+  updated_at:  "2023-05-23 20:19:41.451038",
+  donation_amount_cents: 10000,
+  stripe_charge_id: "ch_3NB1gGIRzI8JQ2J60RkTOmQ2",
+})
+
+shelter1.donations.create!({
+  created_at: "2023-04-24 20:19:41.451038",
+  updated_at:  "2023-04-24 20:19:41.451038",
+  donation_amount_cents: 12050,
+  stripe_charge_id: "ch_3PB1gGIRzI8JQ2J60RkTOmQ2",
+})
+
+shelter2.donations.create!({
+  created_at: "2023-04-20 20:19:41.451038",
+  updated_at:  "2023-04-20 20:19:41.451038",
+  donation_amount_cents: 5500,
+  stripe_charge_id: "ch_3PB1gGIRzI8JP2J60RkTOmQ2",
+})
+
+shelter3.donations.create!({
+  created_at: "2023-05-20 20:19:41.451038",
+  updated_at:  "2023-05-20 20:19:41.451038",
+  donation_amount_cents: 2550,
+  stripe_charge_id: "ch_3PB1gGIRzI9JP2J60RkTOmQ2",
 })
 
 puts "DONE!"

@@ -11,7 +11,7 @@
   
 </head>
 <body>
-<script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_MAPS_API_KEY'] %>&callback=loadMap" async defer></script> 
+
   <%= render 'layouts/top_nav' %>
   <main class="container">
 
@@ -24,5 +24,6 @@
     
     <p class="text-center text-muted">© 2023 Find My Shelter</p>
   </footer>
+  <script defer src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_MAPS_API_KEY'] %>&callback=loadMap"></script> 
 </body>
 </html>

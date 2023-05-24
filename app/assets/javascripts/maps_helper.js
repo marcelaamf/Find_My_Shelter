@@ -2,6 +2,7 @@ function loadMap() {
   console.log("Loading map...");
   var sheltersData = document.getElementById('map').dataset.shelters;
   var shelters = JSON.parse(sheltersData);
+  console.log("shelterdata:", sheltersData)
   initMap(shelters);
 }
 
