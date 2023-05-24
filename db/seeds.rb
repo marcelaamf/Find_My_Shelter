@@ -172,7 +172,7 @@ cat2.shelters.create!({
 })
 
 cat2.shelters.create!({
-  name:  "Sherifg King Home ",
+  name:  "Sheriff King Home ",
   website: "https://www.ywcalgary.ca/programs/domestic-violence-shelter/",
   women_capacity: 25,
   current_women: 16,
